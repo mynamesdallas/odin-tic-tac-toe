@@ -1,5 +1,5 @@
 function Gameboard() {
-    let gameboard = [
+    this.gameboard = [
         "","","",
         "","","",
         "","","",
