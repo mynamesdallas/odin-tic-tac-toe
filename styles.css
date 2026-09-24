@@ -13,11 +13,43 @@ body {
     place-items: center;
 }
 
-#game-board {
-    width: 450px;
-    height: 450px;
-    border: 1px solid black;
+#gameContainer {
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    border: none;
+}
+
+#gameGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: 25px;
+}
+
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
 }
